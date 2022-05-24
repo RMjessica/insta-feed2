@@ -1,9 +1,13 @@
+body {
+  overflow-x: hidden;
+}
+
 div.img-div{
     object-fit: scale-down;
     margin: 1rem 0 1rem 0; 
-  }
+}
   
-  div.card{
-    margin-bottom: 10%;
-  }
+.fas {
+  color: rgb(13, 7, 33);
+}
   

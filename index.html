@@ -10,7 +10,7 @@
     <title>IntaFeed w/bootstrap</title>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid align-items-center">
       <!-- navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -19,47 +19,57 @@
               <i class="fa fa-instagram"></i>
               <img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png" alt="" width="100" height="30" class="d-inline-block align-text-top">
           </a>
-            
-          <!--   navbar button   -->
-          <button class="btn btn-outline-success me-0" data-bs-toggle="modal" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Create a new post</button>  
-                          
-          <!-- modal associated to previous button -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <!-- FIX input box & modal title   --> 
-                <div class="modal-body">
-                  <form id="updateeventsform2" class="form-horizontal">
-                    <div class="form-group">
-                      <label for='areaforinfo'>Message</label>
-                      <textarea class = "form-control" id='areaforinfo' style="min-width: 100%" readonly></textarea>
+
+          <div class="d-flex ">
+            <!--   modal   -->
+            <button class="btn btn-outline-success" data-bs-toggle="modal" type="button" data-bs-toggle="modal" data-bs-target="#modal">Create a new post</button>  
+                            
+            <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  
+                  <div class="modal-body">
+                    <form id="myform" class="form-horizontal">
+                      <div class="form-group">
+                        <label for='areainfo'>Message</label>
+                        <textarea class = "form-control" id='areainfo' style="min-width: 100%"></textarea>
+                      </div>
+                    </form>
+                    <div class="modal-icons mt-3">
+                      <button class="btn btn-outline-dark btn-sm">
+                        <i class="fa-solid fa-camera"></i>
+                      </button>
+                      <button class="btn btn-outline-dark btn-sm">
+                        <i class="fa-solid fa-location-dot"></i>
+                      </button>
                     </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-primary">Publish</button>
+                  </div>
+                  
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-outline-success">Publish</button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- dropdown -->
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fa-solid fa-gear"></i>
-            </button>
-              
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </div> 
+            <!-- dropdown -->
+            <div class="dropdown ps-1">
+              <button class="btn btn-light dropdown-toggle" type="button" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-gear"></i>
+              </button>
+                
+              <div class="dropdown-menu" aria-labelledby="dropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Log Out</a></li>
+              </div> 
+            </div>
+          
           </div>
+          
         </div>    
       </nav>
 
@@ -67,10 +77,10 @@
       <nav class="mx-auto" style="width: 200px">
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
           <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
-            <i class="fas fa-square"></i>
+            <i class="fas fa-th fa-xs"></i>
           </button>
           <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
-            <i class="fas fa-square"></i>
+            <i class="fas fa-square fa-xs"></i>
           </button>
         </div>
       </nav>
@@ -79,22 +89,23 @@
       <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
           <div class="container">
-            <div class="row row-cols-3">
-              <div class="col-sm-2 col-md-6 col-lg-4 col-pb-1">
-                <div class="img-div"><img class="w-100" src="media\1adrien-olichon.jpg" alt="photo"></div>
-                <div class="img-div"><img class="w-100" src="media\2carlos-quintero.jpg" alt="photo"></div>
-                <div class="img-div"><img class="w-100" src="media\3jeremy-bishop.jpg" alt="photo"></div>
+            <div>
+              <div class="row">
+                <div class="img-div col-md"><img class="w-100" src="media\1adrien-olichon.jpg" alt="photo1"></div>
+                <div class="img-div col-md"><img class="w-100" src="media\2carlos-quintero.jpg" alt="photo2"></div>
+                <div class="img-div col-md"><img class="w-100" src="media\3jeremy-bishop.jpg" alt="photo3"></div>
               </div>
-              <div class="col-sm-2 col-md-6 col-lg-4 col-pb-1">
-                <div class="img-div"><img class="w-100" src="media\4mike-yukhtenko.jpg" alt="photo"></div>
-                <div class="img-div"><img class="w-100" src="media\5clark-tibbs.jpg" alt="photo"></div>
-                <div class="img-div"><img class="w-100" src="media\6jo-jo.jpg" alt="photo"></div>
+
+              <div class="row">
+                <div class="img-div col-md"><img class="w-100" src="media\4mike-yukhtenko.jpg" alt="photo4"></div>
+                <div class="img-div col-md"><img class="w-100" src="media\5clark-tibbs.jpg" alt="photo5"></div>
+                <div class="img-div col-md"><img class="w-100" src="media\6jo-jo.jpg" alt="photo6"></div>
               </div>
               
-              <div class="col-sm-2 col-md-6 col-lg-4 col-pb-1">
-                <div class="img-div"><img class="w-100" src="media\7joshua-reddekopp.jpg" alt="photo"></div>  
-                <div class="img-div"><img class="w-100" src="media\8mario-ho.jpg" alt="photo"></div> 
-                <div class="img-div"><img class="w-100" src="media\9phoebe-strafford.jpg" alt="photo"></div>
+              <div class="row">
+                <div class="img-div col-md"><img class="w-100" src="media\7joshua-reddekopp.jpg" alt="photo7"></div>  
+                <div class="img-div col-md"><img class="w-100" src="media\8mario-ho.jpg" alt="photo8"></div> 
+                <div class="img-div col-md"><img class="w-100" src="media\9phoebe-strafford.jpg" alt="photo9"></div>
               </div>
             </div>
           </div>
